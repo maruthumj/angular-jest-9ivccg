@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular with Jest sauce</title>
+    <base href="/" />
+  </head>
+  <body>
+    <div class="button-div" [(style.display)]="buttonDisplay">
+      <button id="open-btn" (click)="openFunction()">Open</button>
+    </div>
+
+    <div
+      [(style.display)]="formDisplay"
+      class="forms-div"
+      style="flex-direction: column; padding: 25px; flex-wrap: wrap"
+    >
+      <input
+        [(ngModel)]="name"
+        type="text"
+        style="text-align: center"
+        id="name"
+        placeholder="Name"
+      />
+      <input
+        [(ngModel)]="email"
+        type="email"
+        id="emaiid"
+        placeholder="E-mail"
+        style="margin-top: 15px; text-align: center"
+      />
+      <input
+        [(ngModel)]="contactNo"
+        type="number"
+        id="rollno"
+        placeholder="Contact number"
+        style="margin-top: 15px; text-align: center"
+      />
+      <button
+        (click)="updateFunction()"
+        id="submit-btn"
+        style="margin-top: 15px"
+      >
+        Update
+      </button>
+    </div>
+    <div
+      class="forms-diplay-div"
+      [(style.display)]="updateDisplay"
+      style="flex-direction:column; margin-top:25%;margin-left:25%;"
+    >
+      <label>{{ name }}</label>
+      <label>{{ email }}</label>
+      <label>{{ contactNo }}</label>
+    </div>
+  </body>
+</html>
